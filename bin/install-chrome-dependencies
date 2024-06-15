@@ -17,7 +17,7 @@ topic "Installing Chrome dependencies"
 # The package list is validated by bin/test.sh - see its output to identify any missing libraries.
 # Also look here for more packages/notes https://developers.google.com/web/tools/puppeteer/troubleshooting
 case "${STACK}" in
-  "heroku-20" | "heroku-22")
+  "heroku-20" | "heroku-22" | "scalingo-20" | "scalingo-22")
     PACKAGES="
       gconf-service
       libappindicator1
@@ -46,7 +46,7 @@ case "${STACK}" in
       fonts-liberation
     "
     ;;
-  "heroku-24")
+  "heroku-24" | "scalingo-24")
     PACKAGES="
       fonts-liberation
       libasound2t64
